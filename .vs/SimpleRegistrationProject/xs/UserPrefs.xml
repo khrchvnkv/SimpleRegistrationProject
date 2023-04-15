@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{53808EE6-27CD-4ED1-821D-679FA328039E}|https">
+  <MonoDevelop.Ide.ItemProperties.SimpleRegistrationProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/UserRegistrationController.cs">
+    <Files>
+      <File FileName="Controllers/UserRegistrationController.cs" Line="15" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SimpleRegistrationProject" expanded="True">
+            <Node name="SimpleRegistrationProject" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="UserRegistrationController.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="UserRegistration" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

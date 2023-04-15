@@ -1,0 +1,21 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model SimpleRegistrationProject.Models.UserRegistrationModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Accept</title>
+    <link href="~/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div>
+    <h1 class="page-title">Registration Accepted</h1>
+    <h2>Thanks @Model.Name for registration</h2>
+    <a asp-controller="Home" asp-action="HomePage">Go to home page</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+<div class="menu-list">
+    <ul class="menu">
+        <li><a asp-controller="Home" asp-action="HomePage">Home</a></li>
+        <li><a asp-controller="UserRegistration" asp-action="RegistrationPage">Registration</a></li>
+        <li><a asp-controller="About" asp-action="About">About</a></li>
+        <li><a asp-controller="Contacts" asp-action="Contacts">Contacts</a></li>
+    </ul>
+</div>
+
+<div class="main">
+    @RenderBody()
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+<footer>
+    ASP.Net Core
+</footer>
+</body>
+</html>

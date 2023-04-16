@@ -13,13 +13,20 @@ namespace SimpleRegistrationProject.Controllers
         [HttpPost]
         public IActionResult Registration(UserRegistrationModel user)
         {
-            if (user != null && user.IsAgree)
+            if (ModelState.IsValid)
             {
-                return View("Accept", user);
+                if (user != null && user.IsAgree)
+                {
+                    return View("Accept", user);
+                }
+                else
+                {
+                    return NotFound();
+                }
             }
             else
             {
-                return NotFound();
+                return View(user);
             }
         }
     }

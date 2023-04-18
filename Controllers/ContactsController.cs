@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using SimpleRegistrationProject.Context;
 
 namespace SimpleRegistrationProject.Controllers
 {
@@ -7,7 +8,11 @@ namespace SimpleRegistrationProject.Controllers
         // GET
         public IActionResult Contacts()
         {
-            return View();
+            using (DbUser db = new DbUser())
+            {
+                var users = db.UserInfo.ToList();
+                return View(users);
+            }
         }
     }
 }

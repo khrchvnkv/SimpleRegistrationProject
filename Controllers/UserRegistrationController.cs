@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using SimpleRegistrationProject.Context;
 using SimpleRegistrationProject.Models;
 
 namespace SimpleRegistrationProject.Controllers
@@ -17,6 +18,11 @@ namespace SimpleRegistrationProject.Controllers
             {
                 if (user != null && user.IsAgree)
                 {
+                    using (DbUser db = new DbUser())
+                    {
+                        db.UserInfo.Add(user);
+                        db.SaveChanges();
+                    }
                     return View("Accept", user);
                 }
                 else

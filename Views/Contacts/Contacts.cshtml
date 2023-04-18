@@ -1,3 +1,5 @@
+@model IEnumerable<UserRegistrationModel>
+
 <!DOCTYPE html>
 
 <html>
@@ -7,6 +9,17 @@
 <body>
 <div>
     <h1 class="page-title">Contacts</h1>
+    <h2>Users</h2>
+    <table border="1" cellspacing="1" cellpadding="1">
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Name</td>
+            <td>@user.Mail</td>
+            <td>@user.Age</td>
+        </tr>
+    }
+    </table>
 </div>
 </body>
 </html>

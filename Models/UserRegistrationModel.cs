@@ -22,14 +22,14 @@ namespace SimpleRegistrationProject.Models
         [Display(Name = nameof(Password))]
         [Required(ErrorMessage = $"Enter {nameof(Password)}")]
         [UIHint("Password")]
-        [Compare(nameof(ConfirmPassword), 
-            ErrorMessage = $"{nameof(Password)} doesn't match {nameof(ConfirmPassword)}")]
         [StringLength(20, MinimumLength = 8)]
         public string Password { get; set; }
         
         [Display(Name = nameof(ConfirmPassword))]
         [UIHint("Password")]
         [Required(ErrorMessage = $"Enter {nameof(ConfirmPassword)}")]
+        [Compare(nameof(Password), 
+            ErrorMessage = $"{nameof(ConfirmPassword)} doesn't match {nameof(Password)}")]
         public string ConfirmPassword { get; set; }
         
         [Display(Name = nameof(Age))]

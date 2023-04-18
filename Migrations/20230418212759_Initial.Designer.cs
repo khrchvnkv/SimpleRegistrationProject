@@ -12,7 +12,7 @@ using SimpleRegistrationProject.Context;
 namespace SimpleRegistrationProject.Migrations
 {
     [DbContext(typeof(DbUser))]
-    [Migration("20230417200804_Initial")]
+    [Migration("20230418212759_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

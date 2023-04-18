@@ -10,7 +10,7 @@ namespace SimpleRegistrationProject.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                "Server=localhost,32772\\mssqllocaldb; Database=Users; Trusted_Connection=true");
+                "Server=localhost,1433\\mssqllocaldb;Database=Users;User Id=sa;Password=123456Aa;TrustServerCertificate=True;MultipleActiveResultSets=true");
         }
     }
 }

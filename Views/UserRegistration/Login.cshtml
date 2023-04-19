@@ -1,0 +1,29 @@
+@model UserLoginModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+<div>
+    <h1 class="page-title">Login</h1>
+    <div class="reg-form">
+        <form asp-controller="UserRegistration" asp-action="Login" method="post">
+            <div class="form-group">
+                <label asp-for="Mail"></label><br />
+                <input asp-for="Mail"/>
+                <span asp-validation-for="Mail"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label><br />
+                <input asp-for="Password"/>
+                <span asp-validation-for="Password"></span>
+            </div>
+            <input type="submit" value="Login"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>

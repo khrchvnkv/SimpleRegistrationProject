@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SimpleRegistrationProject.Models
 {
-    public class UserRegistrationModel
+    public class UserRegistrationModel : UserLoginModel
     {
         public int Id { get; set; }
         
@@ -11,20 +11,7 @@ namespace SimpleRegistrationProject.Models
         [MaxLength(50)]
         [MinLength(2)]
         public string Name { get; set; }
-        
-        [Display(Name = nameof(Mail))]
-        [Required(ErrorMessage = $"Enter {nameof(Mail)}")]
-        [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]/w+)*\.\w+([-.]\w+)*$")]
-        [EmailAddress]
-        [UIHint("EmailAddress")]
-        public string Mail { get; set; }
-        
-        [Display(Name = nameof(Password))]
-        [Required(ErrorMessage = $"Enter {nameof(Password)}")]
-        [UIHint("Password")]
-        [StringLength(20, MinimumLength = 8)]
-        public string Password { get; set; }
-        
+
         [Display(Name = nameof(ConfirmPassword))]
         [UIHint("Password")]
         [Required(ErrorMessage = $"Enter {nameof(ConfirmPassword)}")]

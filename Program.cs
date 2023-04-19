@@ -1,5 +1,8 @@
+using SimpleRegistrationProject.Crypt;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMvc();
+builder.Services.AddSingleton<CryptPassword>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
